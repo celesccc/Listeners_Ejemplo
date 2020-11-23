@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     // TODO: El número que aparece en el TextView no puede ser negativo.
 
+    // TODO: Una vez que has introducido un número en el textView, no puede volver a quedar vacio.
 
     // Investigar como hacer: private var colorOriginal: Int = 0
 
@@ -59,11 +60,13 @@ class MainActivity : AppCompatActivity() {
 
         editTextNumero.setOnFocusChangeListener { v, hasFocus ->
             if (hasFocus) {
-                buttonAdd.setBackgroundColor(Color.parseColor("#ffffff"))
+                buttonAdd.setBackgroundColor(Color.MAGENTA)
+                buttonRemove.setBackgroundColor(Color.MAGENTA)
             } else {
-                Log.w("Comprobar si funciona", "Hola")
-                buttonAdd.setBackgroundColor(Color.YELLOW)
+                //Log.w("Comprobar si funciona", "Hola")
+                buttonAdd.setBackgroundColor(Color.CYAN)
                 //buttonAdd.setBackgroundColor(colorOriginal)
+                buttonRemove.setBackgroundColor(Color.CYAN)
             }
         }
 
